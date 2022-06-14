@@ -16,7 +16,7 @@
 
             <!---FIELDSET MAKES THE SET -->
             <fieldset class = "names">
-                <legend>This is for your information</legend>
+                <legend>Personal information</legend>
                 <!--FIELD FOR NAMES-->
                 <div>
                     <label for="first_name">First name:</label>
@@ -27,43 +27,50 @@
                     <input type="text" id="last_name" name = "last_name" placeholder = "builder...">
                 </div>
                 <div>
+                    <label for="address">Address:</label>
+                    <input type="text" name="address" id="address" placeholder = "homeroad 13 a">
+                </div>
+                <div>
                     <label for="zip_code">Zipcode:</label>                  <!--THIS SHOWS WHEN MOUSE HOVER OVER FIELD-->
                     <input type="text" name="zip" id="zip" pattern="(\d{5})" placeholder = "eg. 12345" title ="5 digits" required> <!--THIS CONTAINS REGEX PATTERN MATCH-->
     
                 </div>
-                <!--AGE-->
+                <!--AGE>
                 <div>
                     <label for="age">Age:</label>
                     <input type="text" id = "age" name = "age" placeholder="123">
                 </div>
+                <-->
                 <!--EMAIL SPECIFIC-->
                 <div>
                     <label for="user_email">*Email Address:</label>
                     <input type="email" id = "user_email" name = "email" placeholder = "miuku@mauku.com" required>  <!--THIS IS WITH REQURED-->
                 </div>
-                <!--PASSWORD SPECIFIC-->
+                <!-- PASSWORD SPECIFIC
+
                 <div>
                     <label for="user_password">Password:</label>
-                    <input type="password" name="passwd" id="passwd" minlength="4">  <!--THIS IS WITH MIN LENGTH-->
+                    <input type="password" name="passwd" id="passwd" minlength="4">  HIS IS WITH MIN LENGTH
                 </div>
     
-                <!---CALENDAR-->
+               
                 <div>
                     <label for="dob">Date of birth:</label>
                     <input type="date" name="dob" id="dob" required pattern="\d{4}-\d{2}-\d{2}">>
-                </div>
+                </div> <-->
             </fieldset>
             
             
             <!---AMOUNT WITH INCREMENT-->
             <fieldset class = "etc">
+                <legend>Order specs:</legend>
                 <div>
                     <label for="amount">Amount:</label>
                     <input type="number" name="amount" id="amount" min="1" max="10" value="0"> <!--THIS IS WITH MIN MAX-->
                 </div>
                 
-                <!---SELECTION SCROLLDOWN MENU-->
-                <div>
+                <!---SELECTION SCROLLDOWN MENU
+                <div >
                     <p>Select your bike:</p>
                     <select name="bike">
                         <option value="trike">trike</option>
@@ -72,19 +79,19 @@
                         <option value="16 in.">awasefawe</option>
                         <option value="18 in.">awefaw</option>
                     </select>
-                </div>
+                </div>-->
                 <!---SELECTION SCROLLDOWN MENU WITH LABELS-->
                 <div>
-                    <select name="clothes" id="clothes">
-                        <optgroup label = "Upper">
-                            <option value="tees">tees</option>
-                            <option value="xes">xes</option>
+                    <select name="food" id="food">
+                        <optgroup label = "Pizza">
+                            <option value="margharita">margharita</option>
+                            <option value="salami">salami</option>
                             <option value="you">you</option>
-                            <option value="yes">yes</option>
+                            <option value="me">me</option>
                         </optgroup>
-                        <optgroup label = "Lower">
-                            <option value="area">area</option>
-                            <option value="no">no</option>
+                        <optgroup label = "Pasta">
+                            <option value="Carbonara">Carbonara</option>
+                            <option value="Pollo">Pollo</option>
                             <option value="match">match</option>
                             <option value="for">for</option>
                         </optgroup>
@@ -92,22 +99,9 @@
                     
                 </div>
                 <!---RADIO CHOOSER-->
-                <h3>Ticket type</h3>
-                <div>
-                    <input type="radio" id = "child" name = "ticket_type"value="child">
-                    <label for="child">Child</label>
-                </div>
-                <div>
-                    <input type="radio" id="adult" name="ticket_type" value="adult" checked> <!--CHECKED AUTOPICKS SELECTION-->
-                    <label for="adult">Adult</label>
-                </div>
-                  
-                <div>
-                    <input type="radio" id="senior" name="ticket_type" value="senior">
-                    <label for="senior">Senior</label>
-                </div>
+                
         
-                <h3>Pizza Toppings</h3>
+                <h3>Extra Toppings</h3>
         
                 <div>
                 <input type="checkbox" id="sausage" name="topping" value="sausage">
@@ -128,20 +122,37 @@
                 <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
                 <label for="mushrooms">Mushrooms</label>
                 </div>
-        
-                <h3>Newsletter:</h3>
+
+
+                <h3>Payment method</h3>
                 <div>
-                    <input type="checkbox" id="newsletter" name="news_letter" checked>
-                    <label for="newsletter">Send me the news letter</label>
+                    <input type="radio" id = "card" name = "payment_method"value="card">
+                    <label for="card">Card</label>
+                </div>
+                <div>
+                    <input type="radio" id="cash" name="payment_method" value="cash" checked> <!--CHECKED AUTOPICKS SELECTION-->
+                    <label for="cash">Cash</label>
+                </div>
+                  
+                <div>
+                    <input type="radio" id="mobile" name="payment_method" value="mobile">
+                    <label for="mobile">Mobile</label>
+                </div>
+
+                <h3>Contactless delivery:</h3>
+                <div>
+                    <input type="checkbox" id="delivery" name="delivery" checked>
+                    <label for="delivery">Yes</label>
                   </div>
+                  
                 <!---TEXT FIELD-->
                 <div>
                     <p>Additional info:</p>
-                    <textarea name="text" id="text" cols="30" rows="10" maxlength="10"></textarea>  <!--THIS IS WITH  MAX LENGTH -->
+                    <textarea name="text" id="text" cols="30" rows="10" maxlength="10" placeholder= "extra request may or may not be fullfilled"></textarea>  <!--THIS IS WITH  MAX LENGTH -->
                 </div>
                 <!---SUBMIT BUTTON-->
                 <div>
-                    <button type="submit">Submit</button>
+                    <button type="submit">Submit order</button>
                     <button type="reset">Reset</button>
                     <button disabled="disabled">I am disabled button</button>
                     <button type ="button" id = "butt">Click me</button>

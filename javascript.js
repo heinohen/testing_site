@@ -1,6 +1,6 @@
 const button3 = document.getElementById('butt');
 button3.addEventListener('click', function(e) {
-    alert('you clicked me')
+    alert('Thanks!')
 });
 
 
