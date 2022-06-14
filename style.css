@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: gray;
+    background-image: url(./images/Fade-In-Background.svg);
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    padding: 20px;
+    gap: 10px;
+}
+
+.names {
+    color: red;
+    padding: 10px;
+}
+
+.etc {
+    color: green;
+    padding: 10px;
+}
+
+
+
+
+
+.footer {
+    height: 50px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    background-color: lightblue;
+    color: navy;
+}
+
+#gitLink:hover {
+    transform: scale(1.2);
+}
