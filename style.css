@@ -1,14 +1,29 @@
+
+
+
+
+/*IMPORT FONT FROM GOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
-    font-family: monospace;
+    font-family: 'Roboto', sans-serif; /*THIS IS THE FONTLINE */
     box-sizing: border-box;
+    
 
 }
 
+legend {/* HERE IS SOME FONT STYLINGS  */
+    font-style: italic;
+    letter-spacing: .4em;
+    text-shadow: rgb(255, 0, 13) 1px 0 10px; /*THIS IS FOR THE ''GLOW''*/
+}
+/*ALL IN BODY*/
 body {
     background-color: gray;
-    background-image: url(./images/Fade-In-Background.svg);
+    background-image: url(./images/Fade-In-Background.svg); /*SVG BACKGROUND */
     color: wheat;
     display: flex;
     flex-direction: column;
@@ -17,6 +32,7 @@ body {
     background-size: cover;
 }
 
+/*TOPIC*/
 .header {
     height: 100px;
     display: flex;
@@ -24,6 +40,8 @@ body {
     justify-content: center;
 }
 
+
+/*MAIN CONTENT*/
 .main {
     padding: 20px;
     gap: 10px;
@@ -44,7 +62,7 @@ fieldset {
 }
 
 
-
+/*FOOTER*/
 .footer {
     height: 50px;
     padding: 5px;
