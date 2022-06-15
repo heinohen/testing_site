@@ -32,12 +32,25 @@ body {
     background-size: cover;
 }
 
+p::first-letter {
+    font-weight: bold;
+    color: yellow;
+}
+
 /*TOPIC*/
 .header {
-    height: 100px;
+    height: 50px;
+    padding: 5px;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    gap: 20px;
     justify-content: center;
+    background-color: lightseagreen;
+    color: navy;
+    opacity: .4;
+    position: fixed;        /*THESE TWO MAKE TOPIC FIXED TO TOP*/
+    width: 100%;            /*---------------------------------*/
 }
 
 
@@ -53,13 +66,22 @@ body {
 }
 
 .etc {
-    color: green;
+    color: rgb(0, 42, 255);
+    background: linear-gradient(360deg, rgba(0, 0, 255, 0.582), rgba(255, 0, 0, 0.445)); /*CREATES THE BACKGROUND*/
     padding: 10px;
 }
 
-fieldset {
+fieldset, .emojis{
     margin: 30px;
 }
+
+.emojify::before { /*EMOJIWORKS*/
+    content: '😎';
+}
+.emojify::after {
+    content: '🤓';
+}
+
 
 
 /*FOOTER*/

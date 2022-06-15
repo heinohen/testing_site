@@ -3,13 +3,19 @@ button3.addEventListener('click', function(e) {
     alert('Thanks!')
 });
 
+//header
+const header = document.querySelector('.header');
+const headerPara = document.createElement('p')
+headerPara.setAttribute('id', 'headerPara');
+headerPara.textContent = "THIS IS THE TOP SECRET TESTING ROOM!";
+header.appendChild(headerPara);
 
 // footer
 const footer = document.querySelector('.footer');
 
 const footerLegal = document.createElement('p');
 footerLegal.setAttribute('class', 'footerPara');
-footerLegal.textContent = "(C) heinohen 2022";
+footerLegal.textContent = "© heinohen 2022";
 
 const footerGit = document.createElement('a');
 footerGit.setAttribute('id', 'gitLink');
